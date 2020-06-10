@@ -1,22 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-const reservations = [
-  {
-    id: 1,
-    name: 'name',
-    email: 'date',
-    phone: 5555555555,
-  },
-];
-const waitlist = [
-  {
-    name: 'name',
-    date: 'date',
-    email: 'email',
-    phone: 5555555555,
-  },
-];
+const reservations = [];
+const waitlist = [];
 
 /* GET users listing. */
 router.get('/reservation', function (req, res, next) {
