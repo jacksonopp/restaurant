@@ -1,0 +1,149 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+$primary: #2a9d8f;
+$secondary: #f4a261;
+$light-gray: #f3f3f3;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.hero {
+  background-color: $light-gray;
+  padding: 2rem;
+  border-radius: 4px;
+  margin: 2rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  hr {
+    width: 80%;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    a {
+      text-decoration: none;
+      background-color: $primary;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+      &:visited {
+        color: white;
+      }
+      &:hover {
+        background-color: lighten($primary, $amount: 5);
+      }
+      &:active {
+        background-color: darken($primary, $amount: 5);
+      }
+      &.home {
+        background-color: $secondary;
+        &:hover {
+          background-color: lighten($secondary, $amount: 5);
+        }
+        &:active {
+          background-color: darken($primary, $amount: 5);
+        }
+      }
+    }
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+.tables,
+.waitlist {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+
+  h2 {
+    background-color: $light-gray;
+    margin-top: 0;
+    padding: 1rem 0 1rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  > div {
+    background-color: $light-gray;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 1rem 1rem;
+    // border: 1px solid black;
+
+    h4 {
+      margin: 0;
+    }
+
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
+
+form {
+  background-color: $light-gray;
+  padding: 2rem;
+  .input-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    align-items: center;
+    label {
+      width: 7ch;
+    }
+    input {
+      width: 50%;
+      border-radius: 4px;
+      padding: 0.3rem;
+      border: 1px solid darken($light-gray, 20);
+      &:focus {
+        border: 1px solid $primary;
+        box-shadow: 0 0 5px 0px $primary;
+      }
+    }
+  }
+  button {
+    text-decoration: none;
+    background-color: $primary;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    border: none;
+    &:visited {
+      color: white;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($primary, $amount: 5);
+    }
+    &:active {
+      background-color: darken($primary, $amount: 5);
+    }
+  }
+}
