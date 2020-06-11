@@ -4,7 +4,7 @@ body {
   font-family: "Open Sans", sans-serif;
   width: 80vw;
   margin: 0 auto;
-}
+  color: #131313; }
 
 h1,
 h2,
@@ -12,8 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 .hero {
   background-color: #f3f3f3;
@@ -23,122 +22,156 @@ h6 {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.hero hr {
-  width: 80%;
-}
-.hero .btn-group {
-  display: flex;
-  justify-content: space-evenly;
-  width: 50%;
-}
-.hero .btn-group a {
-  text-decoration: none;
-  background-color: #2a9d8f;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-.hero .btn-group a:visited {
-  color: white;
-}
-.hero .btn-group a:hover {
-  background-color: #2fb1a1;
-}
-.hero .btn-group a:active {
-  background-color: #25897d;
-}
-.hero .btn-group a.home {
-  background-color: #f4a261;
-}
-.hero .btn-group a.home:hover {
-  background-color: #f6b079;
-}
-.hero .btn-group a.home:active {
-  background-color: #25897d;
-}
+  align-items: center; }
+  .hero hr {
+    width: 80%; }
+  .hero .btn-group {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%; }
+    .hero .btn-group a {
+      text-decoration: none;
+      background-color: #2a9d8f;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.2s; }
+      .hero .btn-group a:visited {
+        color: white; }
+      .hero .btn-group a:hover {
+        background-color: #2fb1a1; }
+      .hero .btn-group a:active {
+        background-color: #264653; }
+      .hero .btn-group a:focus {
+        border: 1px solid #2a9d8f;
+        box-shadow: 0 0 5px 0 #2a9d8f;
+        background-color: #2fb1a1; }
+      .hero .btn-group a.home {
+        background-color: #f4a261; }
+        .hero .btn-group a.home:hover {
+          background-color: #f6b079; }
+        .hero .btn-group a.home:active {
+          background-color: #e76f51; }
+        .hero .btn-group a.home:focus {
+          border: 1px solid #f4a261;
+          box-shadow: 0 0 5px 0 #f4a261;
+          background-color: #f6b079; }
 
 a {
   color: #2a9d8f;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .tables,
 .waitlist {
   margin-bottom: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-.tables h2,
-.waitlist h2 {
-  background-color: #f3f3f3;
-  margin-top: 0;
-  padding: 1rem 0 1rem 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-.tables > div,
-.waitlist > div {
-  background-color: #f3f3f3;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  margin: 1rem 1rem;
-}
-.tables > div h4,
-.waitlist > div h4 {
-  margin: 0;
-}
-.tables > div ul,
-.waitlist > div ul {
-  padding: 0;
-}
-.tables > div ul li,
-.waitlist > div ul li {
-  list-style: none;
-}
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px; }
+  .tables h2,
+  .waitlist h2 {
+    background-color: #f3f3f3;
+    margin-top: 0;
+    padding: 1rem 0 1rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  .tables > div,
+  .waitlist > div {
+    background-color: #f3f3f3;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 1rem 1rem; }
+    .tables > div h4,
+    .waitlist > div h4 {
+      margin: 0; }
+    .tables > div ul,
+    .waitlist > div ul {
+      padding: 0; }
+      .tables > div ul li,
+      .waitlist > div ul li {
+        list-style: none; }
 
 form {
   background-color: #f3f3f3;
-  padding: 2rem;
-}
-form .input-group {
-  display: flex;
-  width: 100%;
-  margin-bottom: 1rem;
-  align-items: center;
-}
-form .input-group label {
-  width: 7ch;
-}
-form .input-group input {
-  width: 50%;
-  border-radius: 4px;
-  padding: 0.3rem;
-  border: 1px solid silver;
-}
-form .input-group input:focus {
-  border: 1px solid #2a9d8f;
-  box-shadow: 0 0 5px 0px #2a9d8f;
-}
-form button {
+  padding: 2rem; }
+  form .input-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    align-items: center; }
+    form .input-group label {
+      width: 7ch; }
+    form .input-group input {
+      width: 50%;
+      border-radius: 4px;
+      padding: 0.3rem;
+      border: 1px solid rgba(0, 0, 0, 0.2); }
+      form .input-group input:focus {
+        border: 1px solid #2a9d8f;
+        box-shadow: 0 0 5px 0px #2a9d8f; }
+
+button {
   text-decoration: none;
   background-color: #2a9d8f;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.2s;
-  border: none;
-}
-form button:visited {
-  color: white;
-}
-form button:hover {
-  cursor: pointer;
-  background-color: #2fb1a1;
-}
-form button:active {
-  background-color: #25897d;
-}
+  border: none; }
+  button:visited {
+    color: white; }
+  button:hover {
+    cursor: pointer;
+    background-color: #2fb1a1; }
+  button:active {
+    background-color: #264653; }
+  button .x {
+    color: #131313; }
+
+.modal {
+  transition: all 0.2s; }
+  .modal .overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 8000;
+    top: 0;
+    left: 0; }
+  .modal .content {
+    position: fixed;
+    width: 50vh;
+    height: 30vh;
+    top: calc(50% - 20vh);
+    left: calc(50% - 25vh);
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 5px 5px 40px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9001; }
+    .modal .content .header {
+      border-bottom: 1px solid black;
+      padding: 1rem 2rem;
+      z-index: 9001;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+      .modal .content .header button {
+        background-color: transparent;
+        border: none; }
+        .modal .content .header button:hover {
+          cursor: pointer; }
+      .modal .content .header .x {
+        font-size: x-large; }
+    .modal .content .body {
+      padding: 1rem;
+      z-index: 9001;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; }
+    .modal .content .continue {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 2rem; }
+
+.hide {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

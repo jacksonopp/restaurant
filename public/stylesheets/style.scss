@@ -3,12 +3,18 @@
 
 $primary: #2a9d8f;
 $secondary: #f4a261;
+$tertiary: #264653;
+$quaternary: #e9c46a;
+$quinary: #e76f51;
 $light-gray: #f3f3f3;
+$dark-gray: #131313;
+$border: 1px solid rgba(0, 0, 0, 0.2);
 
 body {
   font-family: "Open Sans", sans-serif;
   width: 80vw;
   margin: 0 auto;
+  color: $dark-gray;
 }
 
 h1,
@@ -52,7 +58,13 @@ h6 {
         background-color: lighten($primary, $amount: 5);
       }
       &:active {
-        background-color: darken($primary, $amount: 5);
+        // background-color: darken($primary, $amount: 5);
+        background-color: $tertiary;
+      }
+      &:focus {
+        border: 1px solid $primary;
+        box-shadow: 0 0 5px 0 $primary;
+        background-color: lighten($primary, $amount: 5);
       }
       &.home {
         background-color: $secondary;
@@ -60,7 +72,12 @@ h6 {
           background-color: lighten($secondary, $amount: 5);
         }
         &:active {
-          background-color: darken($primary, $amount: 5);
+          background-color: $quinary;
+        }
+        &:focus {
+          border: 1px solid $secondary;
+          box-shadow: 0 0 5px 0 $secondary;
+          background-color: lighten($secondary, $amount: 5);
         }
       }
     }
@@ -75,14 +92,14 @@ a {
 .tables,
 .waitlist {
   margin-bottom: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: $border;
   border-radius: 4px;
 
   h2 {
     background-color: $light-gray;
     margin-top: 0;
     padding: 1rem 0 1rem 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: $border;
   }
 
   > div {
@@ -120,30 +137,95 @@ form {
       width: 50%;
       border-radius: 4px;
       padding: 0.3rem;
-      border: 1px solid darken($light-gray, 20);
+      border: $border;
       &:focus {
         border: 1px solid $primary;
         box-shadow: 0 0 5px 0px $primary;
       }
     }
   }
-  button {
-    text-decoration: none;
-    background-color: $primary;
+}
+
+button {
+  text-decoration: none;
+  background-color: $primary;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  border: none;
+  &:visited {
     color: white;
-    padding: 0.5rem 1rem;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($primary, $amount: 5);
+  }
+  &:active {
+    background-color: $tertiary;
+  }
+  .x {
+    color: $dark-gray;
+  }
+}
+
+.modal {
+  transition: all 0.2s;
+  .overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 8000;
+    top: 0;
+    left: 0;
+  }
+
+  .content {
+    position: fixed;
+    width: 50vh;
+    height: 30vh;
+    top: calc(50% - 20vh);
+    left: calc(50% - 25vh);
+    background-color: white;
     border-radius: 4px;
-    transition: background-color 0.2s;
-    border: none;
-    &:visited {
-      color: white;
+    box-shadow: 5px 5px 40px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9001;
+    .header {
+      border-bottom: 1px solid black;
+      padding: 1rem 2rem;
+      z-index: 9001;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      button {
+        background-color: transparent;
+        border: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .x {
+        font-size: x-large;
+        // margin-right: 1rem;
+      }
     }
-    &:hover {
-      cursor: pointer;
-      background-color: lighten($primary, $amount: 5);
+    .body {
+      padding: 1rem;
+      z-index: 9001;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
     }
-    &:active {
-      background-color: darken($primary, $amount: 5);
+    .continue {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 2rem;
     }
   }
+}
+
+.hide {
+  display: none;
 }
